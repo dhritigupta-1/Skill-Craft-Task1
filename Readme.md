@@ -2,6 +2,9 @@
 
 A modern and fully responsive landing page featuring an interactive fixed navigation menu with scroll-based animations, hover effects, smooth transitions, and engaging UI interactions.
 
+Live Link :- skill-craft-task1-pied.vercel.app
+
+
 ## 🚀 Features
 
 * ✅ Fixed Navigation Bar
