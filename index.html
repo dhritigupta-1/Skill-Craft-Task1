@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A stunning landing page with an interactive fixed navigation menu featuring scroll-triggered styles and hover effects." />
+  <title>Luminary — Interactive Navigation Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ===== FIXED NAVIGATION ===== -->
+  <header id="main-nav" class="nav" role="banner">
+    <div class="nav__container">
+      <!-- Logo -->
+      <a href="#hero" class="nav__logo" id="nav-logo" aria-label="Luminary Home">
+        <span class="nav__logo-icon">⬡</span>
+        <span class="nav__logo-text">Luminary</span>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="nav__links" role="navigation" aria-label="Main navigation">
+        <a href="#hero"     class="nav__link active" id="nav-link-hero"     data-section="hero">Home</a>
+        <a href="#about"    class="nav__link"         id="nav-link-about"    data-section="about">About</a>
+        <a href="#features" class="nav__link"         id="nav-link-features" data-section="features">Features</a>
+        <a href="#pricing"  class="nav__link"         id="nav-link-pricing"  data-section="pricing">Pricing</a>
+        <a href="#contact"  class="nav__link"         id="nav-link-contact"  data-section="contact">Contact</a>
+      </nav>
+
+      <!-- CTA Button -->
+      <a href="#contact" class="nav__cta" id="nav-cta">Get Started</a>
+
+      <!-- Hamburger (mobile) -->
+      <button class="nav__hamburger" id="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+        <span class="nav__bar"></span>
+        <span class="nav__bar"></span>
+        <span class="nav__bar"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="nav__mobile-menu" id="nav-mobile-menu" role="dialog" aria-label="Mobile navigation" aria-hidden="true">
+      <a href="#hero"     class="nav__mobile-link" id="mob-link-hero"     data-section="hero">Home</a>
+      <a href="#about"    class="nav__mobile-link" id="mob-link-about"    data-section="about">About</a>
+      <a href="#features" class="nav__mobile-link" id="mob-link-features" data-section="features">Features</a>
+      <a href="#pricing"  class="nav__mobile-link" id="mob-link-pricing"  data-section="pricing">Pricing</a>
+      <a href="#contact"  class="nav__mobile-link" id="mob-link-contact"  data-section="contact">Contact</a>
+      <a href="#contact"  class="nav__mobile-cta"  id="mob-cta">Get Started</a>
+    </div>
+
+    <!-- Scroll progress bar inside nav -->
+    <div class="nav__progress" id="nav-progress" role="progressbar" aria-label="Page scroll progress"></div>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section id="hero" class="section section--hero">
+      <div class="hero__bg-grid"></div>
+      <div class="hero__orb hero__orb--1"></div>
+      <div class="hero__orb hero__orb--2"></div>
+      <div class="hero__content">
+        <span class="hero__badge">✦ New  ·  Now live</span>
+        <h1 class="hero__title">Navigate <span class="hero__title--gradient">Beautifully</span></h1>
+        <p class="hero__subtitle">Experience an interactive fixed navigation that reacts to scrolling and hover — crafted with pure CSS & vanilla JS.</p>
+        <div class="hero__actions">
+          <a href="#features" class="btn btn--primary" id="hero-cta-primary">Explore Features</a>
+          <a href="#about"    class="btn btn--ghost"   id="hero-cta-secondary">Learn More</a>
+        </div>
+        <div class="hero__stats">
+          <div class="hero__stat"><span class="hero__stat-value">100%</span><span class="hero__stat-label">Vanilla JS</span></div>
+          <div class="hero__stat"><span class="hero__stat-value">0 deps</span><span class="hero__stat-label">No libraries</span></div>
+          <div class="hero__stat"><span class="hero__stat-value">60fps</span><span class="hero__stat-label">Smooth</span></div>
+        </div>
+      </div>
+      <div class="hero__scroll-hint">
+        <span>Scroll to explore</span>
+        <div class="hero__scroll-arrow"></div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="section section--about">
+      <div class="container">
+        <div class="section__label">About</div>
+        <h2 class="section__title">Why a great nav <span class="highlight">matters</span></h2>
+        <p class="section__subtitle">First impressions are made in milliseconds. A navigation bar that responds to user behaviour signals quality —  boosting trust and exploration.</p>
+        <div class="about__cards">
+          <div class="about__card" id="about-card-1">
+            <div class="about__card-icon">🎯</div>
+            <h3>Scroll Awareness</h3>
+            <p>The nav instantly detects scroll position and shifts from transparent to a frosted-glass pill with a subtle shadow.</p>
+          </div>
+          <div class="about__card" id="about-card-2">
+            <div class="about__card-icon">✨</div>
+            <h3>Active Highlighting</h3>
+            <p>Links auto-highlight based on which section is in view, giving users instant orientation on the page.</p>
+          </div>
+          <div class="about__card" id="about-card-3">
+            <div class="about__card-icon">📱</div>
+            <h3>Mobile Drawer</h3>
+            <p>A silky hamburger menu slides open on small screens so the experience is just as polished on mobile.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FEATURES ===== -->
+    <section id="features" class="section section--features">
+      <div class="container">
+        <div class="section__label">Features</div>
+        <h2 class="section__title">Everything you <span class="highlight">need</span></h2>
+        <div class="features__grid">
+          <div class="feature" id="feat-1">
+            <div class="feature__num">01</div>
+            <h3 class="feature__title">Colour Morphing</h3>
+            <p class="feature__desc">Background transitions from fully transparent to a rich semi-opaque dark shade with a smooth CSS transition on scroll past 80 px.</p>
+          </div>
+          <div class="feature" id="feat-2">
+            <div class="feature__num">02</div>
+            <h3 class="feature__title">Progress Indicator</h3>
+            <p class="feature__desc">A thin gradient bar at the bottom of the nav tracks how far down the page you've scrolled — real-time, 60 fps.</p>
+          </div>
+          <div class="feature" id="feat-3">
+            <div class="feature__num">03</div>
+            <h3 class="feature__title">Hover Underline Magic</h3>
+            <p class="feature__desc">Every nav link sports a sliding gradient underline that animates from 0 to full width on hover using a pure CSS pseudo-element.</p>
+          </div>
+          <div class="feature" id="feat-4">
+            <div class="feature__num">04</div>
+            <h3 class="feature__title">Intersection Observer</h3>
+            <p class="feature__desc">Section tracking uses the native Intersection Observer API — no scroll event listeners needed for active-link logic, keeping it butter smooth.</p>
+          </div>
+          <div class="feature" id="feat-5">
+            <div class="feature__num">05</div>
+            <h3 class="feature__title">CTA Pulse</h3>
+            <p class="feature__desc">The "Get Started" button subtly pulses before scroll and snaps to a solid style once the nav background kicks in.</p>
+          </div>
+          <div class="feature" id="feat-6">
+            <div class="feature__num">06</div>
+            <h3 class="feature__title">Zero Dependencies</h3>
+            <p class="feature__desc">Built with exactly one HTML file, one CSS file, and one JS file — no build tools, no npm, no frameworks required.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PRICING ===== -->
+    <section id="pricing" class="section section--pricing">
+      <div class="container">
+        <div class="section__label">Pricing</div>
+        <h2 class="section__title">Simple, honest <span class="highlight">pricing</span></h2>
+        <div class="pricing__cards">
+          <div class="pricing__card" id="price-starter">
+            <div class="pricing__tier">Starter</div>
+            <div class="pricing__price"><span class="pricing__currency">$</span>0<span class="pricing__period">/mo</span></div>
+            <ul class="pricing__features">
+              <li>✓ Fixed navigation</li>
+              <li>✓ Scroll colour change</li>
+              <li>✓ Hover effects</li>
+              <li class="disabled">✗ Progress bar</li>
+              <li class="disabled">✗ Mobile drawer</li>
+            </ul>
+            <a href="#contact" class="btn btn--ghost btn--wide" id="price-starter-cta">Get Free</a>
+          </div>
+          <div class="pricing__card pricing__card--featured" id="price-pro">
+            <div class="pricing__badge">Most Popular</div>
+            <div class="pricing__tier">Pro</div>
+            <div class="pricing__price"><span class="pricing__currency">$</span>19<span class="pricing__period">/mo</span></div>
+            <ul class="pricing__features">
+              <li>✓ Fixed navigation</li>
+              <li>✓ Scroll colour change</li>
+              <li>✓ Hover effects</li>
+              <li>✓ Progress bar</li>
+              <li>✓ Mobile drawer</li>
+            </ul>
+            <a href="#contact" class="btn btn--primary btn--wide" id="price-pro-cta">Get Pro</a>
+          </div>
+          <div class="pricing__card" id="price-enterprise">
+            <div class="pricing__tier">Enterprise</div>
+            <div class="pricing__price"><span class="pricing__currency">$</span>49<span class="pricing__period">/mo</span></div>
+            <ul class="pricing__features">
+              <li>✓ Everything in Pro</li>
+              <li>✓ Custom theming</li>
+              <li>✓ Priority support</li>
+              <li>✓ Multi-site licence</li>
+              <li>✓ SLA guarantee</li>
+            </ul>
+            <a href="#contact" class="btn btn--ghost btn--wide" id="price-enterprise-cta">Contact Sales</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="section section--contact">
+      <div class="container container--narrow">
+        <div class="section__label">Contact</div>
+        <h2 class="section__title">Let's build something <span class="highlight">together</span></h2>
+        <form class="contact__form" id="contact-form" novalidate>
+          <div class="contact__row">
+            <div class="contact__field">
+              <label for="contact-name">Name</label>
+              <input type="text"  id="contact-name"  name="name"  placeholder="Jane Smith"       autocomplete="name"  required />
+            </div>
+            <div class="contact__field">
+              <label for="contact-email">Email</label>
+              <input type="email" id="contact-email" name="email" placeholder="jane@example.com" autocomplete="email" required />
+            </div>
+          </div>
+          <div class="contact__field">
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" name="message" rows="5" placeholder="Tell me about your project…" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--wide" id="contact-submit">Send Message</button>
+          <p class="contact__success" id="contact-success" hidden>🎉 Thanks! I'll be in touch soon.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="footer">
+    <div class="container footer__inner">
+      <span class="footer__brand">⬡ Luminary</span>
+      <span class="footer__copy">© 2026 · Built with vanilla JS & CSS</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
